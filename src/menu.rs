@@ -811,7 +811,7 @@ pub fn location_context_menu<'a>(ancestor_index: usize) -> Element<'a, tab::Mess
         .padding(1)
         .style(|theme| {
             let cosmic = theme.cosmic();
-            let component = &cosmic.background(theme.transparent).component;
+            let component = &cosmic.background(false).component;
             container::Style {
                 icon_color: Some(component.on.into()),
                 text_color: Some(component.on.into()),
