@@ -3890,6 +3890,7 @@ impl Tab {
                 }
             }
             Message::ItemPageDown => {
+                self.dehighlight_all();
                 if let Some((row, col)) =
                     self.select_focus_pos_opt().or(self.select_last_pos_opt())
                 {
@@ -3936,6 +3937,7 @@ impl Tab {
                 }
             }
             Message::ItemPageUp => {
+                self.dehighlight_all();
                 if let Some((row, col)) =
                     self.select_focus_pos_opt().or(self.select_first_pos_opt())
                 {
